@@ -1,5 +1,6 @@
 package com.zpf.leetcode.hothundred;
 
+import com.zpf.leetcode.util.Execute;
 import com.zpf.leetcode.util.Log;
 
 import java.util.ArrayList;
@@ -26,12 +27,7 @@ import java.util.List;
  * 链接：https://leetcode-cn.com/problems/merge-intervals
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Hot_Number_56 {
-    public void get() {
-        int[][] a = {{0, 2}, {2, 3}, {4, 4}, {0, 1}, {5, 7}, {4, 5}, {0, 0}};
-        int[][] b = merge(a);
-        Log.i("结果", b);
-    }
+public class Hot_Number_56 implements Execute {
 
     public int[][] merge(int[][] intervals) {
         int[][] b = dfs(intervals);
@@ -86,5 +82,12 @@ public class Hot_Number_56 {
         }
         Log.i("中间结果", result);
         return result;
+    }
+
+    @Override
+    public void execute() {
+        int[][] a = {{0, 2}, {2, 3}, {4, 4}, {0, 1}, {5, 7}, {4, 5}, {0, 0}};
+        int[][] b = merge(a);
+        Log.i("结果", b);
     }
 }
