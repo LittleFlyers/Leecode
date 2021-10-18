@@ -1,5 +1,9 @@
 package com.zpf.leetcode.hothundred;
 
+import com.zpf.leetcode.util.Execute;
+import com.zpf.leetcode.util.Log;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,9 +26,45 @@ import java.util.List;
  * 链接：https://leetcode-cn.com/problems/subsets
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Hot_Number_78 {
+public class Hot_Number_78 implements Execute {
+    @Override
+    public void execute() {
+        int[] a = {1, 2, 3};
+        Log.i("结果", subsetsIteration(a).size());
+    }
+
+/*    List<List<Integer>> result = new ArrayList<>();
+    List<Integer> resultTemp = new ArrayList<>();
+
     public List<List<Integer>> subsets(int[] nums) {
-//        List
-        return null;
+        dfs(0, nums);
+        return result;
+    }
+
+    public void dfs(int index, int[] nums) {
+        if (index == nums.length) {
+            result.add(new ArrayList<>(resultTemp));
+        } else {
+            resultTemp.add(nums[index]);
+            dfs(index + 1, nums);
+            resultTemp.remove(resultTemp.size() - 1);
+            dfs(index + 1, nums);
+        }
+    }*/
+
+    public List<List<Integer>> subsetsIteration(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        result.add(new ArrayList<Integer>());
+        for (int i : nums) {
+            List<List<Integer>> a = new ArrayList<>();
+            Log.i("中间", result.size());
+            for (List<Integer> temp : result) {
+                List<Integer> cache = new ArrayList<>(temp);
+                cache.add(i);
+                a.add(cache);
+            }
+            result.addAll(a);
+        }
+        return result;
     }
 }
