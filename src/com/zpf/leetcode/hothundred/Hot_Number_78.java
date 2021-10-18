@@ -33,7 +33,7 @@ public class Hot_Number_78 implements Execute {
         Log.i("结果", subsetsIteration(a).size());
     }
 
-/*    List<List<Integer>> result = new ArrayList<>();
+    List<List<Integer>> result = new ArrayList<>();
     List<Integer> resultTemp = new ArrayList<>();
 
     public List<List<Integer>> subsets(int[] nums) {
@@ -50,21 +50,21 @@ public class Hot_Number_78 implements Execute {
             resultTemp.remove(resultTemp.size() - 1);
             dfs(index + 1, nums);
         }
-    }*/
+    }
 
     public List<List<Integer>> subsetsIteration(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-        result.add(new ArrayList<Integer>());
+        List<List<Integer>> resultIn = new ArrayList<>();
+        resultIn.add(new ArrayList<>());
         for (int i : nums) {
             List<List<Integer>> a = new ArrayList<>();
-            Log.i("中间", result.size());
-            for (List<Integer> temp : result) {
+            Log.i("中间", resultIn.size());
+            for (List<Integer> temp : resultIn) {
                 List<Integer> cache = new ArrayList<>(temp);
                 cache.add(i);
                 a.add(cache);
             }
-            result.addAll(a);
+            resultIn.addAll(a);
         }
-        return result;
+        return resultIn;
     }
 }
