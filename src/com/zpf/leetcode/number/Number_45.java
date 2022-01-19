@@ -1,4 +1,4 @@
-package com.zpf.leetcode;
+package com.zpf.leetcode.number;
 
 /**
  * 给定一个非负整数数组，你最初位于数组的第一个位置。

@@ -1,4 +1,4 @@
-package com.zpf.leetcode;
+package com.zpf.leetcode.number;
 
 import javax.swing.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.zpf.leetcode;
+package com.zpf.leetcode.number;
 
 public class Number_5 {
     public String longestPalindrome(String s) {

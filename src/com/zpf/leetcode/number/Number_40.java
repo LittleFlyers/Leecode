@@ -1,4 +1,4 @@
-package com.zpf.leetcode;
+package com.zpf.leetcode.number;
 
 import java.sql.Array;
 import java.util.ArrayList;
