@@ -1,7 +1,8 @@
-package com.zpf.leetcode.util;
+package com.zpf.leetcode;
 
-class test {
+import com.zpf.leetcode.util.Execute;
 
+public class Main {
     public static void main(String[] args) {
         execute();
     }
