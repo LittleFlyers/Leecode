@@ -3,6 +3,10 @@ package com.zpf.leetcode.util;
 import java.util.List;
 
 public class Log {
+    public static void i(String s) {
+        System.out.println(s);
+    }
+
     public static void i(String TAG, String s) {
         System.out.println(TAG + ":" + s);
     }
