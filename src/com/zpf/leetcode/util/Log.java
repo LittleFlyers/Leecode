@@ -7,6 +7,10 @@ public class Log {
         System.out.println(s);
     }
 
+    public static void i(int s) {
+        System.out.println(s);
+    }
+
     public static void i(String TAG, String s) {
         System.out.println(TAG + ":" + s);
     }
