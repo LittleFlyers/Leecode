@@ -9,7 +9,7 @@ public class Main {
 
     private static void execute() {
         try {
-            Class<?> exClass = Class.forName("com.zpf.leetcode.number.Number_523");
+            Class<?> exClass = Class.forName("com.zpf.leetcode.number.Number_7");
             Execute execute = (Execute) exClass.newInstance();
             execute.execute();
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
