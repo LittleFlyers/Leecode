@@ -4,7 +4,9 @@ import com.zpf.leetcode.util.Execute;
 
 public class Main {
     public static void main(String[] args) {
-        execute();
+        String a ="";
+        String b = "a";
+        System.out.println(b.contains(a));
     }
 
     private static void execute() {
